@@ -1,0 +1,31 @@
+[debug] [2023-04-01T00:47:40.132Z] ----------------------------------------------------------------------
+[debug] [2023-04-01T00:47:40.134Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\troyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-01T00:47:40.134Z] CLI Version:   11.25.2
+[debug] [2023-04-01T00:47:40.134Z] Platform:      win32
+[debug] [2023-04-01T00:47:40.134Z] Node Version:  v16.14.0
+[debug] [2023-04-01T00:47:40.135Z] Time:          Fri Mar 31 2023 17:47:40 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-04-01T00:47:40.135Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-01T00:47:40.195Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-01T00:47:40.196Z] > authorizing via signed-in user (troyjonsilva@gmail.com)
+[debug] [2023-04-01T00:47:40.196Z] [iam] checking project gnsq-4b45b for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-01T00:47:40.198Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gnsq-4b45b:testIamPermissions [none]
+[debug] [2023-04-01T00:47:40.198Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gnsq-4b45b:testIamPermissions x-goog-quota-user=projects/gnsq-4b45b
+[debug] [2023-04-01T00:47:40.198Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gnsq-4b45b:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-01T00:47:40.386Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gnsq-4b45b:testIamPermissions 200
+[debug] [2023-04-01T00:47:40.387Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gnsq-4b45b:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-01T00:47:40.387Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gnsq-4b45b [none]
+[debug] [2023-04-01T00:47:40.647Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gnsq-4b45b 200
+[debug] [2023-04-01T00:47:40.648Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gnsq-4b45b {"projectId":"gnsq-4b45b","projectNumber":"838902889913","displayName":"GNSQ","name":"projects/gnsq-4b45b","resources":{"hostingSite":"gnsq-4b45b"},"state":"ACTIVE","etag":"1_4a85d172-d7b1-4d1e-8aa6-2802593c542a"}
+[debug] [2023-04-01T00:47:43.080Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/gnsq-4b45b/sites pageToken=&pageSize=10
+[debug] [2023-04-01T00:47:43.714Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/gnsq-4b45b/sites 200
+[debug] [2023-04-01T00:47:43.714Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/gnsq-4b45b/sites {"sites":[{"name":"projects/gnsq-4b45b/sites/gnsq-4b45b","defaultUrl":"https://gnsq-4b45b.web.app","appId":"1:838902889913:web:809a0f3ac3b0d3089f8a68","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-01T00:47:43.714Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:838902889913:web:809a0f3ac3b0d3089f8a68/config [none]
+[debug] [2023-04-01T00:47:44.454Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:838902889913:web:809a0f3ac3b0d3089f8a68/config 200
+[debug] [2023-04-01T00:47:44.454Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:838902889913:web:809a0f3ac3b0d3089f8a68/config {"projectId":"gnsq-4b45b","appId":"1:838902889913:web:809a0f3ac3b0d3089f8a68","storageBucket":"gnsq-4b45b.appspot.com","apiKey":"AIzaSyAXW485xy-bJT6U3szccu1J8OpPZ5G5VAE","authDomain":"gnsq-4b45b.firebaseapp.com","messagingSenderId":"838902889913"}
+[debug] [2023-04-01T00:48:02.748Z] TypeError: Cannot read properties of null (reading 'endsWith')
+    at ɵcodegenPublicDirectory (C:\Users\troyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:206:56)
+    at async prepareFrameworks (C:\Users\troyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:269:13)
+    at async deploy (C:\Users\troyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
